@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class='boxnav' onClick="clickNav('inicio',this,'rgb(12 46 45 / 70%)')" id="abrir_pordefecto">Inicio</button> 
+            <button class='boxnav' onclick="clickNav('historia',this,'rgb(86 235 235/ 70%)')">Historia</button>
+            <button class='boxnav' onclick="clickNav('peliculas',this,'rgb(12 46 45 / 70%)')">Películas</button>
+            <button class='boxnav' onclick="clickNav('peliculas',this,'rgb(12 46 45 / 70%)')">Estádisticas</button>
+            <button class='boxnav' onclick="clickNav('juegos',this,'rgb(12 46 45 / 70%)')">Juegos</button>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class='box'></section>
+        <section id="historia" class='box'></section>
+        <section id="peliculas" class='box'></section>      
+        <section id="peliculas" class='box'></section>  
+        <section id="juegos " class='box'></section>  
+    </main>   
+    <footer>
+    </footer>
+    <script>
+        //Función de Onclick
+
+        function clickNav (pageName, element, color){
+            var i, box, boxnav;
+            box = document.getElementsByClassName("box");
+            for (i = 0; i < box.length; i++){  //para la posicion de box que 
+                box[i].style.display = "none"; //que tu estes presionando, el estilo de ventana 
+                }
+
+            boxnav = document.getElementsByClassName("boxnav");
+            for (i = 0; i < boxnav.length; i++){     // para cuando selecciones la caja del nav
+                boxnav[i].style.backgroundColor = "";// el botón de dicha posición va a cambiar al color que se le asigne.
+                }
+            document.getElementById(pageName).style.display = "block";
+            element.style.backgroundColor = color;   
+            }
+        
+        document.getElementById("abrir_pordefecto").click();
+
+
+    </script>
+</body>
+</html>
+

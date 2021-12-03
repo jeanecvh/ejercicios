@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado-amarillo{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-azul{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-anaranjado{
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-rosado{
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-rojo{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-marron{
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-verde{
+            background-color: greenyellow;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+        .cuadrado-morado{
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<script>
+    // SÁBADO 13 DE NOVIEMBRE : 
+
+        // PRACTICA
+        //Construya bucles for que realicen las siguientes tareas:
+
+        //1. Imprime los números del 0 al 20, un número por línea.
+             
+            //Solo bucle
+        /*    for(var i=0;i<21;i++){
+                //Instrucciones
+                console.log(i)
+            }
+
+            //Esta función sirve para crear un div y colocarle un color (el div se llamara class = "cuadrado-" (color que le ponga), aquíColocaréLoQueQuieraQueImprima)
+            function crearDiv (color,texto){
+                //Crea un elemento div en el dom
+                var div = document.createElement("div");
+                //Define el texto que irá en el div
+                div.innerText = texto;
+                div.className= "cuadrado-"+color
+                //añade el elemento al body
+                document.body.appendChild(div)
+            }
+
+            //Función completa + implementación de div en cada linea de texto del bucle.
+            function imprimirSerieNumeros(numero){
+            for(var i=0;i<numero;i++){
+                //Instrucciones
+                // Crea un elemento div
+                var div = document.createElement("div")
+                // Define el texto del div
+                div.innerText = i
+                div.className="cuadrado-amarillo"
+                // Añade el elemento al body
+                document.body.appendChild(div)
+                }
+            }
+            imprimirSerieNumeros(5)
+
+            //Función imprmirSerieNumeros + crearDiv
+            function serieNumerosYdiv (numero){
+                for(i = 0; i < numero; i++){
+                    crearDiv("anaranjado", i)
+                }
+            }
+
+            serieNumerosYdiv(5)
+        //2. Imprima solo los valores ODD del 3 al 29, un número por línea.
+            
+        function imprimirSeriePar(inicio, fin) {
+            for (var i = inicio; i < +fin; i ++){
+
+    
+                if( i % 2 != 0){
+                    crearDiv("rosado",i)
+                }   else {
+                    crearDiv("rojo",i)
+                    }
+            }
+        }
+            imprimirSeriePar(1,10)
+        
+        //3. Imprima los números PAR 12 hasta -14 en orden descendente, un número por línea.
+
+            function imprimirOrdenDescendente(inicio,fin){
+                for(i = inicio; i > fin; i=i-1){
+                    if( i % 2 != 0) {
+                    crearDiv("marron",i)
+                    }   else{
+                    crearDiv("verde",i)      
+                    }
+                }
+
+            }
+            imprimirOrdenDescendente(12,-14)
+
+        //4. Imprime los números del 50 al 20 en orden descendente, pero solo si los números son múltiplos de 3.
+
+        function multiplosTres (inicio, fin) {
+            for (i = inicio; i > fin; i=i-1){
+                if (i%3 == 0){
+                    crearDiv("morado",i)
+                }
+            }
+        }
+
+        multiplosTres(50,20)
+        */
+        // TAREA: 
+
+        /*Escriba un programa JavaScript que repita los números enteros del 1 al 100. Pero para múltiplos de tres imprima "Fizz" en lugar del número y para los múltiplos de cinco imprima "Buzz". Para números que son múltiplos de tres y cinco, escriba "FizzBuzz"
+        */
+        /*
+        function FizzBuzz(){
+            for (let i = 0; i <= 100; i++) {
+                if (i % 5 == 0 && i % 3 == 0 ) {
+                    console.log("FizzBuzz")
+                } else if ( i % 3 == 0) {
+                    console.log("Fizz") 
+                } else if ( i % 5 == 0) {
+                    console.log ("Buzz")
+                } else {
+                    console.log (i)
+                }
+            }
+        }
+
+        FizzBuzz()
+        */
+        /*
+        Escriba un programa JavaScript para construir el siguiente patrón, utilizando un bucle for anidado.
+        *  
+        * *  
+        * * *  
+        * * * *  
+        * * * * *  
+        */
+
+        function piramide (n) {
+            for ( let i = 1; i <= n; i++) {
+                let stringVacio = ""
+                for ( let j = 1; j<= i; j++ ){
+                    stringVacio = stringVacio + "*"
+                }
+                console.log(stringVacio)
+            } 
+        }
+        piramide(5)
+        /*
+        Escriba un programa JavaScript para sumar los múltiplos de 3 y 5 en 1000.
+        */
+
+        //CORREGIIIIIIIIIIIIIIIIIIR
+
+       function multiple () {
+           let n = 50;
+           for ( let i = 0; i <= 1000; i++) {
+               if ( i % 3 == 0 || i & 5 == 0) {
+                   s += i
+               }
+           }
+           return s
+       }
+
+       console.log(multiple())
+       
+</script>
+</body>
+</html>

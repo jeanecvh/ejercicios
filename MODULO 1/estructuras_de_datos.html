@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>InnerText</p>
+    <script>
+        //Arrays, arreglos o lista de vectores:
+        var producto1 = "cereal";
+        var producto2 = "chocolate";
+        var producto3 = "arroz";
+        var producto4 = "jabon";
+
+        //Estructura de datos:
+        var productos = ["cereal","chocolate","arroz", "jabon", "sandia", "lechuga"]
+        var numeros = [1,2,3,4,5,6,7,8,9]
+
+        //Podemos almacenar lo que queramos: 
+
+        var ramdon = [1,2,3,true,false,null, "hola", "adios"]
+
+        console.log(productos);
+        console.log(numeros);
+        console.log(ramdon)
+
+        for (var i = 0; i < productos.length; i++) {
+            var p = document.createElement("p");
+            p.innerText = productos[i]
+            document.body.appendChild(p)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<html>
+    <head>
+    </head>
+<body>
+
+    <script>
+
+        // SÁBADO 9 DE NOVIEMBRE : 
+        
+        // 1.- Escriba un programa JavaScript que acepte dos números enteros y muestre el más grande.
+
+
+        //CON VARIABLES: 
+        let numeroMayor = 1000;
+        let numeroMenor = 10;
+
+        console.log('¿Es ' + numeroMayor + ' mayor que ' + numeroMenor + '?')
+
+        if(numeroMayor > numeroMenor) {
+            console.log('La respuesta es verdadera, el numero mayor es: ' + numeroMayor)
+        }   else {
+            console.log(' La respuesta es falsa, el numero mayor es: ' + numeroMenor)
+        }
+        
+
+        //CON FUNCIONES
+
+        
+        function numeroMayorMenor (numeroMayor,numeroMenor) {
+
+            console.log('¿Es ' + numeroMayor + ' mayor que ' + numeroMenor + '?')
+
+            if(numeroMayor > numeroMenor) {
+            console.log('La respuesta es verdadera, el numero mayor es: ' + numeroMayor)
+        }   else {
+            console.log(' La respuesta es falsa, el numero mayor es: ' + numeroMenor)
+        }
+
+        }
+
+        numeroMayorMenor(50,100)
+        
+
+        //2.- Escriba una declaración condicional de JavaScript para ordenar tres números. Muestre un cuadro de alerta para mostrar el resultado.
+
+        
+        let x = 9;
+        let y = 8;
+        let z = 3;
+
+        alert('Los números son: ' + x + ', ' + y + ', ' + z + ', ' + ' los cuales se ordenarán de manera ascendente.')
+
+
+        if (x < y && x < z) {
+            alert(x + ', ' + y + ', ' + z);
+        } else if (x < z && x < y) {
+            alert(x + ', ' + z + ', ' + y);
+        } else if (y < x && y < z) {
+            alert(y + ', ' + x + ', ' + z);
+        } else if (y < z && y < x) {
+            alert(y + ', ' + z + ', ' + x);
+        } else if (z < x && z < y) {
+            alert(z + ', ' + x + ', ' + y);
+        } else if (z < y && z < x) {
+            alert(z + ', ' + y + ', ' + x);
+        }  
+        else {
+            console.log('no funciona');
+        }
+
+        
+        //CON FUNCIONES
+
+        function equipo8 (x,y,z) {
+        
+        alert('Los números son: ' + x + ', ' + y + ', ' + z + ', ' + ' los cuales se ordenarán de manera ascendente.')
+            
+        if (x < y && x < z) {
+            alert(x + ', ' + y + ', ' + z);
+        } else if (x < z && x < y) {
+            alert(x + ', ' + z + ', ' + y);
+        } else if (y < x && y < z) {
+            alert(y + ', ' + x + ', ' + z);
+        } else if (y < z && y < x) {
+            alert(y + ', ' + z + ', ' + x);
+        } else if (z < x && z < y) {
+            alert(z + ', ' + x + ', ' + y);
+        } else if (z < y && z < x) {
+            alert(z + ', ' + y + ', ' + x);
+        } else {
+            console.log('no funciona');
+        }
+
+        }
+
+        equipo8(5,1,2);
+
+        //3.- Escribe una función llamada assignGradeasí:
+            // toma 1 argumento, una puntuación numérica.
+            // devuelve una calificación para la puntuación, ya sea "A", "B", "C", "D" o "F".
+            //Llame a esa función para obtener algunos puntajes diferentes y registre el resultado para asegurarse de que funcione.
+
+
+
+            function puntaje (puntuacion){
+
+            if (puntuacion == 20){ 
+                console.log('A')                
+            } else if (puntuacion <= 19 && puntuacion >= 18){;
+                console.log('B')
+            } else if (puntuacion <= 17 && puntuacion >= 15){;
+                console.log('C')
+            } else if (puntuacion <= 14 && puntuacion >= 11){;
+                console.log('D')
+            } else if (puntuacion <= 10 && puntuacion >= 0){;
+                console.log('F')
+            }
+        
+            }
+
+            puntaje(20)
+            puntaje(18)
+            puntaje(16)
+            puntaje(13)
+            puntaje(10)
+
+        //4.- Escribe una función llamada helloWorldasí:
+            //toma 1 argumento, un código de idioma (por ejemplo, "es", "de", "en")
+            //devuelve "Hello, World" para el idioma dado, para al menos 3 idiomas. Debería volver a inglés de forma predeterminada.
+            //Llame a esa función para cada uno de los idiomas admitidos y registre el resultado para asegurarse de que funcione.
+
+            
+            let idioma = prompt("Escribe 'hola' en inglés, francés o portugués");
+
+            if(idioma === 'Hi' || idioma === 'Hello' || idioma === 'bonjour' || idioma === 'Olá'){
+                alert('Hello, World')
+            } else {
+                alert('Recuerda que los idiomas aceptados son: inglés, francés o portugués')
+            }
+
+
+
+            //CON FUNCIONES
+
+            function helloWorld (lenguaje){
+                if (lenguaje == "DE" || lenguaje == "ES" || lenguaje == "EN"){
+                    console.log("Hello World");
+                } else {
+                    console.log("Hola Mundo")
+                }
+            }
+
+            helloWorld("DE");
+            helloWorld("ES");
+            helloWorld("hola");
+
+            
+        // 5.- Escribe una función llamada pluralizeasí:
+            //toma 2 argumentos, un sustantivo y un número.
+            //devuelve el número y la forma plural, como "5 gatos" o "1 perro".
+            //Llame a esa función para obtener algunos puntajes diferentes y registre el resultado para asegurarse de que funcione.
+            //Bono: haz que maneje algunos sustantivos colectivos como "oveja" y "gansos".
+
+            let sustantivo = prompt('¿Cuales de estas mascotas te gustaría tener?:' + '\n' + 'A. Oveja' + '\n' + 'B. Perro' + '\n' + 'C. Ganso');
+            let numero = prompt('¿Cuántos quisieras tener?');
+
+            let A = 'oveja'
+            let B = 'perro'
+            let C = 'ganso'
+            
+            
+            if(numero == 1 && sustantivo == 'A') {
+                console.log('Tendrás ' + numero + ' ' + A + ' ' + 'para tu cumpleaños');
+            } else if(numero > 1 && sustantivo == 'A') {
+                console.log('Tendrás ' + numero + ' ' + A + 's' + ' ' + 'para tu cumpleaños');
+            } else if ( numero == 1 && sustantivo == 'B' ){
+                console.log('Tendrás ' + numero + ' ' + B + ' ' + 'para tu cumpleaños');
+            } else if ( numero > 1 && sustantivo == 'B' ){
+                console.log('Tendrás ' + numero + ' ' + B + 's' + ' ' + 'para tu cumpleaños');
+            }  else if ( numero == 1 && sustantivo == 'C' ){
+                console.log('Tendrás ' + numero + ' ' + C + ' ' + 'para tu cumpleaños');
+            } else if ( numero > 1 && sustantivo == 'C' ){
+                console.log('Tendrás ' + numero + ' ' + C + 's' + ' ' + 'para tu cumpleaños');
+            } 
+  
+
+            //CON FUNCIONES
+
+
+            function pluralize (sustantivo, numero){
+        
+            if(numero == 1 && sustantivo == 'oveja') {
+                console.log('Tendrás ' + numero + ' ' + sustantivo + ' ' + 'para tu cumpleaños');
+            } else if(numero > 1 && sustantivo == 'oveja') {
+                console.log('Tendrás ' + numero + ' ' + sustantivo + 's' + ' ' + 'para tu cumpleaños');
+            } else if ( numero == 1 && sustantivo == 'perro' ){
+                console.log('Tendrás ' + numero + ' ' + sustantivo + ' ' + 'para tu cumpleaños');
+            } else if ( numero > 1 && sustantivo == 'perro' ){
+                console.log('Tendrás ' + numero + ' ' + sustantivo + 's' + ' ' + 'para tu cumpleaños');
+            }  else if ( numero == 1 && sustantivo == 'ganso' ){
+                console.log('Tendrás ' + numero + ' ' + sustantivo + ' ' + 'para tu cumpleaños');
+            } else if ( numero > 1 && sustantivo == 'ganso' ){
+                console.log('Tendrás ' + numero + ' ' + sustantivo + 's' + ' ' + 'para tu cumpleaños');
+            } 
+
+        }
+        pluralize('oveja',1);
+        pluralize('oveja',5);
+        pluralize('perro',1);
+        pluralize('perro',2);
+        pluralize('ganso',1);
+        pluralize('ganso',3);
+             
+             
+    </script>
+</body>
+</html>

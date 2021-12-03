@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     
+    function simpleArraySum(arrays) {
+    // Write your code here
+    let ar = [1,2,3,4,10,11];
+    let suma = 0;
+    for(let i = 0; i < ar.length; i ++){
+        (suma += ar[i])
+    } 
+    return  console.log(suma)
+    }  
+
+    simpleArraySum()
+
+    function aVeryBigSum(bigNumber) {
+    // Write your code here
+    let bigN = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
+    let suma = 0;
+        for(let i = 0; i < bigN.length; i ++){
+        (suma += bigN[i])
+        } 
+        return  console.log(suma)
+    }  
+
+    aVeryBigSum()
+    
+    
+
+    function compareTriplets(a, b) {
+    // Write your code here
+        let points = [0,0];
+        for (let i = 0; i < a.length; i++) {
+            if (a [i] > b [i]) {
+                points[0] += 1;
+            } else if (a [i] < b [i]) {
+                points[1] += 1
+            }
+        }
+
+        return points;
+    }
+        
+    compareTriplets(10,20)
+
+
+    function staircase(n) {
+    // Write your code here
+        for ( let i = 1; i <= n; i++) {
+            for ( let j = n; j>= i; j-- ){
+                if ( i < j) {
+                    process.stdout.write("#");
+                } else {
+                    process.stdout.write(" ");
+                }
+                
+            }   
+                console.log(" ");
+        } 
+
+    }
+
+    staircase(6)
+
+    </script>
+
+</body>
+</html>
+
+
