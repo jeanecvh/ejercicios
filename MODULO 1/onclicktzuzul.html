@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .semaforo {
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <div id ="semaforo" class ="semaforo">Presiona el boton para iniciar el Semáforo</div>
+    <button id="button_presionar" class = "button_presionar">Presionar</button>
+
+    <script>
+
+        //Llama a un elemento desde el DOM
+
+        let buttonPresionar = document.getElementById("button_presionar");
+        let semaforo = document.getElementById("semaforo");
+        let color = "verde"
+        let saludo = "Hola, esta en"
+
+        //Eventos: click
+        buttonPresionar.onclick = function () {
+            if (color === "verde"){
+                semaforo.style.backgroundColor = "yellow";
+                color = "amarillo"
+                semaforo.innerText = saludo + " Amarillo"
+            } else if (color === "amarillo") {
+                semaforo.style.backgroundColor = "red"; 
+                color = "rojo"
+                semaforo.innerText = saludo + " Rojo"
+            } else if (color === "rojo") {
+                semaforo.style.backgroundColor = "greenyellow";
+                color = "verde"
+                semaforo.innerText = saludo + " Verde"
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

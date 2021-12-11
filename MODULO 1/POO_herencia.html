@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <script>
+
+       //SuperClase
+       //Objetos de JavaScript serán dinámicos
+       class Pokemon {
+           constructor (tamaño,ataque,defensa) {
+               this.tamaño = tamaño
+               this.ataque = ataque
+               this.defensa = defensa
+           }        
+           comer(){
+            console.log("Estoy comiendo")
+           }
+       }
+       //Subclase
+       class Fuego extends Pokemon{
+            tipoAtaques = "Fuego"
+            constructor(debilidad,tamaño, ataque, defensa){
+                super(tamaño, ataque, defensa)
+                this.debilidad = debilidad
+
+            }
+            lanzallamas(){
+                console.log("Usando lanzallamas")
+            }
+       }
+
+       //Subclase
+       class Agua extends Pokemon{
+            tipoAtaques = "Agua"
+            constructor(debilidad,tamaño, ataque, defensa){
+                super(tamaño, ataque, defensa)
+                this.debilidad = debilidad
+
+            }
+            chorroDeAgua(){
+                console.log("Lanzando ataque...")
+            }
+       }
+
+       const squirtle = new Agua("Electrico", "Pequeño",100,120);
+       const mudkip = new Agua("Electrico", "Pequeño",100,120);
+       const charmander = new Fuego ("Agua", "Pequeño",100,90);
+
+       console.log(squirtle);
+       console.log(mudkip);
+       console.log(charmander);
+
+       
+   </script> 
+</body>
+</html>
