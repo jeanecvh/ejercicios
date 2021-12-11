@@ -57,12 +57,11 @@
     // Write your code here
         for ( let i = 1; i <= n; i++) {
             for ( let j = n; j>= i; j-- ){
-                if ( i < j) {
-                    process.stdout.write("#");
+                if ( i <= j) {
+                    console.log("#");
                 } else {
-                    process.stdout.write(" ");
+                    console.log(" ");
                 }
-                
             }   
                 console.log(" ");
         } 
