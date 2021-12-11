@@ -15,13 +15,70 @@
             edad: 25,
             estadoCivil: false,
             intereses: ["Musica", "cine", "programación", "patines"],
+            direccion: {
+                cp: 100300,
+                ciudad: "Ciudad de mexico",
+                calle: "Calle algo",
+                numero:"120202",
+            },
+            dinero: 12,
             //Métodos
             repirar:function(){
                 alert("Estoy respirando...");
             }
         }
-
         yo.repirar()
+        alert(yo.direccion.cp)
+
+        //Clases siempre se nombran con mayúscula
+
+        class Persona {
+            nombre
+            edad
+            estadoCivil
+            intereses
+
+            // Constructor 
+            constructor (nombre, edad, estadoCivil, intereses){
+                this.nombre = nombre
+                this.edad = edad
+                this.estadoCivil = estadoCivil
+                this.intereses = intereses
+
+            }
+
+            respirar(){
+                alert(`Yo ${this.nombre}estoy respirando....`);
+            }
+            inhalar(){
+                alert(`Yo ${this.nombre}estoy inhalando....`);
+            }
+            exhalar(){
+                alert(`Yo ${this.nombre}estoy exhalando....`);
+            }
+        }
+
+        
+        //Creando una instancia de una clase = creando un objeto con el constructor
+        let jeanella = new Persona("Jeanella", 25, false, ["Musica", "cine", "programación", "patines"])
+        let jeanella2 = new Persona("Jeanella", 25, null, ["Musica", "cine", "programación", "patines"])
+
+        console.log(jeanella);
+        console.log(jeanella2);
+        console.log(exhalar.jeanella)
+
+        let personaJSON =  {
+            "nombre":"Carolina",
+            "edad":23,
+            "direccion":{
+                "cp":100300,
+                "ciudad":"Ciudad de México",
+                "calle":"Calle algo",
+                "numero":"120202",
+            }
+        }
+
+
     </script>
 </body>
 </html>
